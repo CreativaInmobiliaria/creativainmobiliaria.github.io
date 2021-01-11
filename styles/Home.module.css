@@ -5,24 +5,40 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+.overlay{
+  z-index: 999;
+  text-align: center;
+  
+  
+}
+.overlay h1{
+  
+  color: white;
+  font-weight: 200;
+  font-size: 55px;
+  z-index: 999;
+}
+.overlay p{
+  color: white;
+  font-weight: 200;
+  font-size: 40px;
+  z-index: 999;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.butt{
+  background-color: transparent;
+  border: 1px solid white;
+font-weight: 300;
+margin-top: 50px;
 }
-
+.butt:hover{
+  background-color: transparent;
+}
 .footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  background-color:#F8F8F8;
 }
 
 .footer img {
@@ -40,17 +56,9 @@
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
+
+
 
 .title,
 .description {
@@ -62,61 +70,83 @@
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.about{
+  margin-top: 7vh;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+.about h1{
+  font-weight: 300;
+  font-size: 45px;
+}
+.about p{
+  font-weight: 200;
+  font-size: 25px;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+.abogados{
+
+  margin-top: 7vh;
+  
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  .overlay{
+    margin-top: 7vh;
+    max-height: 50vh;
+    
+    
+  }
+  .overlay h1{
+    margin-top: 3vh;
+    font-size: 25px;
+    
+    
+  }
+  .overlay p{
+   
+    font-size: 25px;
+    
+  }
+  .butt{
+
+    font-size: 15px;
+  }
+  .container {
+    min-height: 60vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .about h1{
+    font-size: 30px;
+    text-align: center;
+  }
+  .about p{
+    font-size: 22px;
+    text-align: center;
+  }
+}
+@media screen and ( max-width: 900px) and ( min-width:700px ) {
+  .about h1{
+  
+    text-align: center;
+  }
+  .about p{
+   
+    text-align: center;
+  }
+  .imagesleft{
+
+    padding-left:100px;
+    padding-right:100px
+  }
+
+
 }

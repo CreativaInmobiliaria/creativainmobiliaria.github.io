@@ -1,65 +1,93 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import Foot from './components/footer'
+import Carousel from 'react-bootstrap/Carousel'
+import Carr from './components/carrousel'
+import Contacto from './components/Contacto'
+import { Button, Container, Row, Col, Grid } from 'react-bootstrap';
 
 export default function Home() {
+
+
   return (
-    <div className={styles.container}>
+    <>
+      <Carr />
+
       <Head>
-        <title>Create Next App</title>
+        <title>Creativa inmobiliaria</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <section className={styles.container}>
+        <div className={styles.overlay} data-aos="fade-in" data-aos-duration="2000">
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <h1 >
+            Vivienda y suelo en toda España
+       </h1>
+          <p>
+            Los mejores expertos a tu disposición
+       </p>
+          <Button href="#contacto" className={styles.butt}>
+            Contáctanos
+       </Button>
         </div>
-      </main>
+      </section>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+      <section className={styles.about} id="about">
+        <Container >
+
+          <Row data-aos="fade-in" data-aos-duration="2000">
+            <Col xs={12} s={12} xl={6} xxl={6}>
+              <h1 >
+                Los mejores expertos en inmobiliaria
+        </h1>
+              <p>Si estas pensando en comprar un inmueble y no te decides, en Creativa inmobiliaria contamos con agentes comerciales
+          con más de 20 años de experiencia en el sector, te apoyarán y aconsejarán en cualquier duda.</p>
+            </Col>
+            <Col className={styles.imagesleft} xs={12} s={12} xl={6} xxl={6}  >
+              <Image
+                src="/inmobi-deal.jpg"
+                alt="Picture of the author"
+                width={560}
+                height={400}
+              />
+            </Col>
+
+
+          </Row>
+          <Row className={styles.abogados}>
+
+            <Col className={styles.imagesleft} xs={12} s={12} xl={6} xxl={6} xl={{ order: 'first' }} data-aos="fade-in" data-aos-duration="2000">
+
+              <Image
+                src="/inmobi-deal2.jpg"
+                alt="Picture of the author"
+                width={560}
+                height={400}
+              />
+            </Col>
+            <Col xs={12} s={12} xl={6} xxl={6} xs={{ order: 'first' }} data-aos="fade-in" data-aos-duration="2000">
+              <h1>
+                Abogados expertos en Derecho Inmobiliario e inversiones
+        </h1>
+              <p>Contamos con un equipo de abogados experto en el ámbito de la inmobiliaria, cualquier problema o duda legal que tengas sobre inmuebles o inversiones, te ayudamos.</p>
+            </Col>
+
+          </Row>
+        </Container>
+
+
+      </section>
+
+      <section className={styles.footer} data-aos="fade-in" id="contacto">
+        <Contacto />
+      </section>
+
+      <footer>
+        <Foot />
       </footer>
-    </div>
+
+    </>
   )
 }
